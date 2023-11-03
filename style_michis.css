@@ -1,0 +1,49 @@
+/* Esta es la hoja de estilos relacionada con "michis.html" */
+
+/* El selector universal "*": selecciona todos los elementos */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+}
+
+/* Con el selector de clase ".": seleccionamos todos los elementos que tienen el atributo de class especificado */
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* "::after" crea un pseudo-elemento que es el último hijo del elemento seleccionado */
+/* En este ejemplo, estamos añadiendo un ancho de 350px y un contenido "" después de la galería de fotos.  */
+.gallery::after {
+  content: "";
+  width: 350px;
+}
